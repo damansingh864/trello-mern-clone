@@ -10,6 +10,7 @@ export const ContentWrapper = styled.div`
   height: 100%;
   padding: 40px 10px 20px;
   display: flex;
+  position: relative;
 `
 
 export const MainSection = styled.div`

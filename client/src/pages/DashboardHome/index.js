@@ -20,7 +20,7 @@ const DashboardHome = () => (
         </Switch>
         {/* <MainContent /> */}
         {/* <BoardContent /> */}
-      </MainSection>
+      </MainSection>      
     </ContentWrapper>
   </Wrapper>
 )

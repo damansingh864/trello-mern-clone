@@ -3,9 +3,9 @@ import React from 'react'
 import { Container, Header, Title, CloseIcon, Content } from './styles'
 
 const PopUp = (props) => (
-  <Container>
+  <Container style={{ [props.direction]: '4px' }}>
     <Header>
-      <Title>Create</Title>
+      <Title>{props.title}</Title>
       <CloseIcon><i className="fas fa-times" /></CloseIcon>
     </Header>
     <Content>

@@ -38,6 +38,7 @@ export const Box = styled.div`
   font-size: 14px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   .rightMargin {
     margin-right: 10px;

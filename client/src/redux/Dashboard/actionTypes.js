@@ -1,0 +1,1 @@
+export const ADD_POP_UP = 'ADD_POP_UP'

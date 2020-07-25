@@ -4,8 +4,11 @@ export const Container = styled.div`
   width: 250px;
   height: auto;
   padding: 0 15px;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgb(230, 230, 230);
   border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 4px;
 `
 
 export const Header = styled.div`

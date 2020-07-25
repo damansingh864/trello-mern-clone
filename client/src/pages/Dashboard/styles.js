@@ -9,4 +9,5 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   height: 100%;
   flex: 1;
+  position: relative;
 `
