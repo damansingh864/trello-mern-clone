@@ -6,6 +6,7 @@ import SidebarMenu from '../../components/SidebarMenu'
 import MainContent from '../../components/MainContent'
 import BoardContent from '../../components/BoardContent'
 
+
 import PopUp from '../../components/common/PopUp'
 
 const DashboardHome = () => (
@@ -13,10 +14,11 @@ const DashboardHome = () => (
     <ContentWrapper>
       <SidebarMenu />
       <MainSection>
-        <PopUp />
+        {/* <PopUp /> */}
         <Switch>
           <Route path="/dashboard" exact component={MainContent} />
           <Route path="/dashboard/boards" component={BoardContent} />
+          {/* <Route path="/dashboard/board" component={Board} /> */}
         </Switch>
         {/* <MainContent /> */}
         {/* <BoardContent /> */}

@@ -17,11 +17,13 @@ export const memoizedPopUpData = createSelector(
   (state) => state.dashboard,
   (dashboard) => {
     const {
-      popUpDirection
+      popUpDirection,
+      toggleAddPopUp
     } = dashboard
 
     return {
-      popUpDirection
+      popUpDirection,
+      toggleAddPopUp
     }
   }
 )

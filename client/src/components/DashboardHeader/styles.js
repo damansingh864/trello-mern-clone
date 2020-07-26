@@ -66,4 +66,5 @@ export const ProfilePhoto = styled.div`
   width: 25px;
   border-radius: 50%;
   background: orange;
+  cursor: pointer;
 `
