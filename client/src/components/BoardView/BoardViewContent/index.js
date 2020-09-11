@@ -7,6 +7,7 @@ import Task from './Task'
 import InfoAddBox from '../../common/InfoAddBox'
 import AddBox from '../../common/AddBox'
 import Input from '../../common/Input'
+import CardDetailPopUp from '../../common/CardDetailsPopUp'
 
 import { Wrapper,TaskWrapper, AddTaskWrap } from './styles'
 
@@ -37,6 +38,7 @@ const BoardViewContent = () => {
           <AddTaskWrap>
             {toggle ? taskAdd : AddCard}
           </AddTaskWrap>
+          <CardDetailPopUp />
           {/* <Task />
           <Task />
           <Task /> */}
