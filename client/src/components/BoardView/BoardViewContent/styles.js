@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  border: 1px solid red;
   flex: 1;
   padding: 10px 20px;
 `
 
 export const TaskWrapper = styled.div`
   display: flex;
-  height: 100%
+  height: 100%;
+`
+
+export const AddTaskWrap = styled.div`
+  min-width: 250px;
 `
 

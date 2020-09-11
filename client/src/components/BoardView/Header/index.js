@@ -15,11 +15,14 @@ const Header = () => {
     <HeaderWrap>
       <LeftSection>
         <Title>Board Name</Title>
-        <QuickAccess></QuickAccess>
+        <QuickAccess>
+          <i class="far fa-heart"></i>
+          <i class="fas fa-heart"></i>
+        </QuickAccess>
       </LeftSection>
       <RightSection>
-        <TeamView></TeamView>
-        <Menu></Menu>
+        <TeamView>Damanvir List</TeamView>
+        <Menu>Menu</Menu>
       </RightSection>
     </HeaderWrap>
   )
