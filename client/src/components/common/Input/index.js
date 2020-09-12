@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Wrapper, Input } from './styles'
 
-const InputComp = () => {
+const InputComp = ({ classStyle }) => {
   return (
-    <Wrapper>
+    <Wrapper className={classStyle}>
       <Input
         type="text"
         placeholder="Enter list title"

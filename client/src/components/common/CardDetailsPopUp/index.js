@@ -1,7 +1,11 @@
 import React from 'react'
 
+import Input from '../../common/Input'
+
 import {
-  PopUp, Wrapper, TopWrapper, TitleWrapper, Section, Tagline, Members, IconWrap
+  PopUp, Wrapper, TopWrapper, CrossIcon, TitleWrapper, Section, Tagline, Members, IconWrap,
+  InSectionHead, ContentWrapper, LeftWrapper, MembersList, DescriptionBox, AttachmentsBox, ActivityBox,
+  SectionTitle, TitleWrap, SidebarWrapper, SidebarActions, ActionWrap
 } from './styles'
 
 const CardDetailsPopUp = () => {
@@ -12,27 +16,63 @@ const CardDetailsPopUp = () => {
          <TopWrapper>
             <TitleWrapper>
               <IconWrap><i class="far fa-credit-card" /></IconWrap>
+              <Input
+                classStyle="edit-hide"
+              />
             </TitleWrapper>
-            <Section>
-              <Tagline></Tagline>
-              <Members></Members>
-            </Section>            
+            <Section noBottomMargin>
+              <Tagline>in list Todo</Tagline>              
+            </Section>
+            <CrossIcon><i class="fas fa-times" /></CrossIcon>
         </TopWrapper>
-        {/*<ContentWrapper>
+        
+       <ContentWrapper>          
           <LeftWrapper>
-            <DescriptionBox></DescriptionBox>
-            <AttachmentsBox></AttachmentsBox>
-            <ActivityBox></ActivityBox>
+            <Section>
+              <Members>
+                <InSectionHead>Members</InSectionHead>
+                <MembersList>
+                  
+                </MembersList>
+              </Members>
+            </Section>
+            <DescriptionBox>
+              <SectionTitle>
+                <IconWrap><i className="fas fa-stream"></i></IconWrap>
+                <TitleWrap>Description</TitleWrap>
+              </SectionTitle>
+              <Section>
+                Damanvir SIngh
+              </Section>
+            </DescriptionBox>
+            <AttachmentsBox>
+              <SectionTitle>
+                <IconWrap><i className="fas fa-paperclip" /></IconWrap>
+                <TitleWrap>Attachments</TitleWrap>
+              </SectionTitle>
+              <Section>
+                Damanvir SIngh
+              </Section>
+            </AttachmentsBox>
+            <ActivityBox>
+              <SectionTitle>
+                <IconWrap><i className="fas fa-th-list" /></IconWrap>
+                <TitleWrap>Activity</TitleWrap>
+              </SectionTitle>
+              <Section>
+                Damanvir SIngh
+              </Section>
+            </ActivityBox>            
           </LeftWrapper>
-          <SidebarWrapper>
-            <SideTitleBox>Add to Card</SideTitleBox>
-            <SidebarActions>
-              <ActionWrap>Members</ActionWrap>
-              <ActionWrap>Attachment</ActionWrap>
-              <ActionWrap>Cover</ActionWrap>
+           <SidebarWrapper>
+           <InSectionHead>Add to Card</InSectionHead>
+           <SidebarActions>
+              <ActionWrap><i className="far fa-user" /> Members</ActionWrap>
+              <ActionWrap><i className="fas fa-paperclip" /> Attachment</ActionWrap>
+              <ActionWrap><i className="far fa-image" /> Cover</ActionWrap>
             </SidebarActions>
           </SidebarWrapper>
-        </ContentWrapper> */}
+        </ContentWrapper>
       </Wrapper>
     </PopUp>
   )
