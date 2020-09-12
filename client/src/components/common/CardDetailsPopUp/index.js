@@ -12,7 +12,7 @@ import {
   SectionTitle, TitleWrap, SidebarWrapper, SidebarActions, ActionWrap, ActivityWrap
 } from './styles'
 
-const CardDetailsPopUp = () => {
+const CardDetailsPopUp = ({ details, onExit }) => {
   return (
     <PopUp>
       <Wrapper>
@@ -21,12 +21,13 @@ const CardDetailsPopUp = () => {
               <IconWrap><i class="far fa-credit-card" /></IconWrap>
               <Input
                 classStyle="edit-hide"
+                value={details.name}                
               />
             </TitleWrapper>
             <Section noBottomMargin>
               <Tagline>in list Todo</Tagline>              
             </Section>
-            <CrossIcon><i class="fas fa-times" /></CrossIcon>
+            <CrossIcon onClick={onExit}><i class="fas fa-times" /></CrossIcon>
         </TopWrapper>        
        <ContentWrapper>          
           <LeftWrapper>
@@ -46,7 +47,9 @@ const CardDetailsPopUp = () => {
                 <TitleWrap>Description</TitleWrap>
               </SectionTitle>
               <Section>
-                <Description />
+                <Description
+                  text={details.description}
+                />
               </Section>
             </DescriptionBox>
             <AttachmentsBox>

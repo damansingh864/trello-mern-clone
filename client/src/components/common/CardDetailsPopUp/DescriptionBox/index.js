@@ -7,12 +7,12 @@ import {
   Wrapper, BoxWrap
 } from './styles'
 
-const DescriptionBox = () => {
+const DescriptionBox = ({ text }) => {
   const [box, toggleBox] = useState(false)
 
   const addDescription = (
     <BoxWrap onClick={() => toggleBox(prevState => !prevState)}>
-      Add a more detailed description...
+      {text ? text : 'Add a more detailed description...'}
     </BoxWrap>
   )
 
@@ -23,8 +23,9 @@ const DescriptionBox = () => {
       noMenu
     >
       <Textarea
-        autoFocus
+        autoFocus        
       >    
+        {text}
       </Textarea>
     </InfoAddBox>
   )

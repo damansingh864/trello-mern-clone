@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Wrapper, Title, Menu } from './styles'
 
-const TaskHeader = () => {
+const TaskHeader = ({ name }) => {
   return (
     <Wrapper>
-      <Title>Design</Title>
+      <Title>{name}</Title>
       <Menu><i class="fas fa-ellipsis-h" /></Menu>
     </Wrapper>
   )

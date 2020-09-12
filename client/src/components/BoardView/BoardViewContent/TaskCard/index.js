@@ -15,19 +15,19 @@ const data = [
   }
 ]
 
-const TaskCard = () => {
+const TaskCard = ({ name, image, description, activity, togglePopUp }) => {
   return (
-    <Wrapper draggable>
-      {data[0].image && <ImageWrap></ImageWrap>}
-      <Title>{data[0].name}</Title>
-      {data[0].description && <Description>{data[0].description}</Description>}
+    <Wrapper draggable onClick={togglePopUp}>
+      {image && <ImageWrap></ImageWrap>}
+      <Title>{name}</Title>
+      {description && <Description>{description}</Description>}
       <CardBottom>
         <TeamList>
         </TeamList>
         <CardActivity>
-          {data[0].activity.comments && <IconWrap>{data[0].activity.comments} <i class="far fa-heart" /></IconWrap>}
-          {data[0].activity.favorites && <IconWrap>{data[0].activity.favorites} <i class="far fa-comment-dots" /></IconWrap>}
-          {data[0].activity.attachments && <IconWrap>{data[0].activity.attachments} <i class="fas fa-paperclip" /></IconWrap>}
+          {activity.comments && <IconWrap>{activity.comments} <i class="far fa-comment-dots" /></IconWrap> || ''}
+          {/* {activity.favorites && <IconWrap>{activity.favorites} <i class="far fa-comment-dots" /></IconWrap> || ''} */}
+          {activity.attachments && <IconWrap>{activity.attachments} <i class="fas fa-paperclip" /></IconWrap> || ''}
         </CardActivity>
       </CardBottom>
     </Wrapper>

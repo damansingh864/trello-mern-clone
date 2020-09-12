@@ -10,14 +10,16 @@ import {
   Menu
 } from './styles'
 
-const Header = () => {
+const Header = ({ title, favorites }) => {
   return (
     <HeaderWrap>
       <LeftSection>
-        <Title>Board Name</Title>
+        <Title>{title}</Title>
         <QuickAccess>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-heart"></i>
+          {favorites ? 
+            <i class="fas fa-heart"></i>
+            : <i class="far fa-heart"></i>
+          }
         </QuickAccess>
       </LeftSection>
       <RightSection>
