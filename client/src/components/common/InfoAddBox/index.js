@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Wrapper, SaveBtnWrap, Menu, LeftSec, CloseIcon } from './styles'
 
-const InfoAddBox = ({ children, toggleCard }) => {
+const InfoAddBox = ({ children, toggleCard, classStye, noMenu }) => {
   return (
-    <Wrapper>
+    <Wrapper className={classStye}>
       {children}
       <SaveBtnWrap>
         <LeftSec>
@@ -13,7 +13,7 @@ const InfoAddBox = ({ children, toggleCard }) => {
           </button>
           <CloseIcon onClick={toggleCard}><i class="fas fa-times" /></CloseIcon>
         </LeftSec>
-        <Menu><i class="fas fa-ellipsis-h" /></Menu>
+        {!noMenu && <Menu><i class="fas fa-ellipsis-h" /></Menu>}
       </SaveBtnWrap>
     </Wrapper>
   )

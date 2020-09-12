@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Input from '../../common/Input'
+import Description from './DescriptionBox'
+import Attachments from './Attachments'
 
 import {
   PopUp, Wrapper, TopWrapper, CrossIcon, TitleWrapper, Section, Tagline, Members, IconWrap,
@@ -11,7 +13,6 @@ import {
 const CardDetailsPopUp = () => {
   return (
     <PopUp>
-      Daman
       <Wrapper>
          <TopWrapper>
             <TitleWrapper>
@@ -24,8 +25,7 @@ const CardDetailsPopUp = () => {
               <Tagline>in list Todo</Tagline>              
             </Section>
             <CrossIcon><i class="fas fa-times" /></CrossIcon>
-        </TopWrapper>
-        
+        </TopWrapper>        
        <ContentWrapper>          
           <LeftWrapper>
             <Section>
@@ -42,7 +42,7 @@ const CardDetailsPopUp = () => {
                 <TitleWrap>Description</TitleWrap>
               </SectionTitle>
               <Section>
-                Damanvir SIngh
+                <Description />
               </Section>
             </DescriptionBox>
             <AttachmentsBox>
@@ -51,7 +51,10 @@ const CardDetailsPopUp = () => {
                 <TitleWrap>Attachments</TitleWrap>
               </SectionTitle>
               <Section>
-                Damanvir SIngh
+                <Attachments />
+                {/* <Attachments />
+                <Attachments />
+                <Attachments /> */}
               </Section>
             </AttachmentsBox>
             <ActivityBox>
@@ -64,7 +67,7 @@ const CardDetailsPopUp = () => {
               </Section>
             </ActivityBox>            
           </LeftWrapper>
-           <SidebarWrapper>
+          <SidebarWrapper>
            <InSectionHead>Add to Card</InSectionHead>
            <SidebarActions>
               <ActionWrap><i className="far fa-user" /> Members</ActionWrap>
