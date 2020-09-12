@@ -22,8 +22,8 @@ export const Wrapper = styled.div`
 `
 
 export const TopWrapper = styled.div`
-  border: 1px solid red;
-  padding: 20px;
+  /* border: 1px solid red; */
+  padding: 20px 20px 10px;
   position: relative;
 `
 
@@ -72,7 +72,7 @@ export const IconWrap = styled.div`
 export const Section = styled.div`
   padding-left: 40px;
   margin-top: 8px;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   height: auto;
   margin-bottom: 20px;
 
@@ -86,7 +86,7 @@ export const Tagline = styled.div`
 `
 
 export const Members = styled.div`
-  margin-top: 12px;
+  /* margin-top: 12px; */
 `
 
 export const InSectionHead = styled.div`
@@ -105,7 +105,14 @@ export const LeftWrapper = styled.div`
   flex: 1;
 `
 
-export const MembersList = styled.div``
+export const MembersList = styled.div`
+  margin-top: 8px;
+  display: flex;
+
+  & > div {
+    margin-right: 6px;
+  }
+`
 
 export const DescriptionBox = styled.div`
   margin-top: 15px;  
@@ -130,7 +137,7 @@ export const TitleWrap = styled.div`
 export const SidebarWrapper = styled.div`
   width: 25%;
   /* border: 1px solid red; */
-  padding: 20px 20px 20px 0; 
+  padding: 0px 20px 20px 0; 
 `
 
 export const SidebarActions = styled.div`
@@ -155,4 +162,8 @@ export const ActionWrap = styled.div`
     background: #ddd;
     cursor: pointer;
   }
+`
+
+export const ActivityWrap = styled.div`
+  padding: 15px 0;
 `

@@ -3,11 +3,13 @@ import React from 'react'
 import Input from '../../common/Input'
 import Description from './DescriptionBox'
 import Attachments from './Attachments'
+import Activity from './Activity'
+import MembersShow from './MembersShow'
 
 import {
   PopUp, Wrapper, TopWrapper, CrossIcon, TitleWrapper, Section, Tagline, Members, IconWrap,
   InSectionHead, ContentWrapper, LeftWrapper, MembersList, DescriptionBox, AttachmentsBox, ActivityBox,
-  SectionTitle, TitleWrap, SidebarWrapper, SidebarActions, ActionWrap
+  SectionTitle, TitleWrap, SidebarWrapper, SidebarActions, ActionWrap, ActivityWrap
 } from './styles'
 
 const CardDetailsPopUp = () => {
@@ -32,7 +34,9 @@ const CardDetailsPopUp = () => {
               <Members>
                 <InSectionHead>Members</InSectionHead>
                 <MembersList>
-                  
+                  <MembersShow />
+                  <MembersShow />
+                  <MembersShow />
                 </MembersList>
               </Members>
             </Section>
@@ -62,9 +66,9 @@ const CardDetailsPopUp = () => {
                 <IconWrap><i className="fas fa-th-list" /></IconWrap>
                 <TitleWrap>Activity</TitleWrap>
               </SectionTitle>
-              <Section>
-                Damanvir SIngh
-              </Section>
+              <ActivityWrap>
+                <Activity />              
+              </ActivityWrap>
             </ActivityBox>            
           </LeftWrapper>
           <SidebarWrapper>
