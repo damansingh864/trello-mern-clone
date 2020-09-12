@@ -8,3 +8,12 @@ export const memoizedBoardViewState = createSelector(
     return { togglePopUp, selectedPopUp }
   }
 )
+
+export const memoizedBoardData = createSelector(
+  state => state.board,
+  (boardState) => {
+    const { boardData } = boardState
+
+    return { boardData }
+  }
+)

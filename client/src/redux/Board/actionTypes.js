@@ -1,1 +1,5 @@
 export const TOGGLE_POPUP_CARD = 'TOGGLE_POPUP_CARD'
+
+export const TASK_TITLE_ADD = 'TASK_TITLE_ADD'
+
+export const CARD_TITLE_ADD = 'CARD_TITLE_ADD'

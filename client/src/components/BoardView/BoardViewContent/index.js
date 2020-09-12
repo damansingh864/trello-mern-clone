@@ -9,7 +9,7 @@ import InfoAddBox from '../../common/InfoAddBox'
 import AddBox from '../../common/AddBox'
 import Input from '../../common/Input'
 import CardDetailPopUp from '../../common/CardDetailsPopUp'
-import { togglePopUpCard } from '../../../redux/Board/actions'
+import { togglePopUpCard, taskTitle } from '../../../redux/Board/actions'
 import { memoizedBoardViewState } from '../../../redux/Board/selectors'
 
 import { Wrapper,TaskWrapper, AddTaskWrap } from './styles'
@@ -18,6 +18,7 @@ const BoardViewContent = ({ taskName, task: taskList }) => {
   const dispatch = useDispatch()
   const { togglePopUp, selectedPopUp } = useSelector(memoizedBoardViewState)
   const [toggle, toggleCard] = useState(false)
+  const [inputTitle, updateTaskTitle] = useState('')
 
   const AddCard = (
     <AddBox toggleCard={() => toggleCard(prevState => !prevState)} style={{ height: 'auto', padding: '6px 0' }}>
@@ -26,8 +27,19 @@ const BoardViewContent = ({ taskName, task: taskList }) => {
   )
 
   const taskAdd = (
-    <InfoAddBox  toggleCard={() => toggleCard(prevState => !prevState)}>
-      <Input />
+    <InfoAddBox
+      toggleCard={() => toggleCard(prevState => !prevState)}
+      onSave={(e) => {
+        e.preventDefault()
+        dispatch(taskTitle(inputTitle))
+        toggleCard(prevState => !prevState)
+        updateTaskTitle('')
+      }}      
+    >
+      <Input
+        value={inputTitle}
+        onChange={(e) => updateTaskTitle(e.target.value)}
+      />
     </InfoAddBox>
   )
     console.log(toggle)
@@ -38,7 +50,7 @@ const BoardViewContent = ({ taskName, task: taskList }) => {
           {taskName.map(name => (
             <Task
               name={name}
-              tasks={taskList[name]}
+              tasks={taskList[name] && taskList[name]}
             />
           ))}
           {/* <Task />

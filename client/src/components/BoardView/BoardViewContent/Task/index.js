@@ -25,7 +25,7 @@ const Task  = ({ name, tasks, togglePopUp }) => {
             togglePopUp={() => dispatch(togglePopUpCard(task))}
           />
         ))}        
-        <AddNewCard />
+        <AddNewCard taskName={name} />
       </Scrollbars>
     </Wrap>
   )

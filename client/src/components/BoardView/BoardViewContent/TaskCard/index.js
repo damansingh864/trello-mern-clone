@@ -25,9 +25,9 @@ const TaskCard = ({ name, image, description, activity, togglePopUp }) => {
         <TeamList>
         </TeamList>
         <CardActivity>
-          {activity.comments && <IconWrap>{activity.comments} <i class="far fa-comment-dots" /></IconWrap> || ''}
+          {(activity && activity.comments && <IconWrap>{activity.comments} <i class="far fa-comment-dots" /></IconWrap>) || ''}
           {/* {activity.favorites && <IconWrap>{activity.favorites} <i class="far fa-comment-dots" /></IconWrap> || ''} */}
-          {activity.attachments && <IconWrap>{activity.attachments} <i class="fas fa-paperclip" /></IconWrap> || ''}
+          {(activity && activity.attachments && <IconWrap>{activity.attachments} <i class="fas fa-paperclip" /></IconWrap>) || ''}
         </CardActivity>
       </CardBottom>
     </Wrapper>
